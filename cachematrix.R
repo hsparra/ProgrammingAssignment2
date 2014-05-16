@@ -11,6 +11,8 @@
 
 makeCacheMatrix <- function(x = matrix()) {
    inverse <- NULL
+   # When setting a new matrix reset the inverse to NULL.
+   # This ensures cacheSolve does not return a stale cache.
    set <- function(y) {
       x <<- y
       inverse <<- NULL
